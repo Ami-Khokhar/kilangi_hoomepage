@@ -1,111 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kilangi Jewellery</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KILANGI - Exquisite 925 Sterling Silver Jewelry. Discover timeless elegance with our handcrafted rings, necklaces, bracelets, and earrings.">
+    <meta name="keywords" content="jewelry, 925 sterling silver, rings, necklaces, bracelets, earrings, luxury jewelry">
+    <meta name="author" content="KILANGI">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="KILANGI - Timeless Jewelry">
+    <meta property="og:description" content="Exquisite 925 Sterling Silver Jewelry">
+    <meta property="og:type" content="website">
+    
+    <title>KILANGI - Timeless Jewelry | 925 Sterling Silver</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p><i class="fas fa-truck"></i> Free Any Jewellery - Free Shipping! <span class="highlight">Shop Now</span></p>
+    </div>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="header__top">
-    Step into Sparkle – Pure Gold & Silver Await
-  </div>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-  <div class="header__main">
-    <h1 class="logo">KILANGI</h1>
+            <!-- Search Icon (Mobile) -->
+            <button class="search-icon-mobile" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
 
-    <input class="search" type="text" placeholder="Search for Earrings.." />
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="../images/logo.jpg" alt="KILANGI Logo" class="logo-img">
+            </a>
 
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">All Jewellery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Rings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Gifts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+            </nav>
 
-    <nav class="nav">
-      <a href="#">All Jewellery</a>
-      <a href="#">Gold</a>
-      <a href="#">Silver</a>
-      <a href="#">Gifting</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="action-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn wishlist-btn" aria-label="Wishlist">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="action-btn user-btn" aria-label="Account">
+                    <i class="far fa-user"></i>
+                </button>
+                <button class="action-btn cart-btn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="#">All Jewellery</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Offerings</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero__content">
-    <h2>Because You Deserve to<br>Feel Timeless.</h2>
-    <p>
-      Each piece is thoughtfully designed to celebrate your individuality —
-      blending modern elegance with lasting craftsmanship.
-    </p>
-    <button class="btn-primary">Explore the Elegance</button>
-  </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <img src="../images/hero-bg.jpg" alt="Luxury Jewelry Collection" class="hero-bg-img">
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Because You Deserve to<br>
+                        Feel <span class="italic">Timeless.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Delicate gold and silver ornaments that compliment any mood, each piece is meticulously crafted to be the finishing touch to anything you have planned.
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                        Explore the Elegance <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="../images/ring-1.jpg" alt="Diamond Ring" class="hero-ring">
+                    <img src="../images/bracelet-1.jpg" alt="Gold Bracelet" class="hero-bracelet">
+                </div>
+            </div>
+            <!-- Hero Features -->
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <span>Anti - Fade Polish</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Timeless Design</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-feather"></i>
+                    <span>Lightweight & Comfort</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gem"></i>
+                    <span>Modern Minimal</span>
+                </div>
+            </div>
+        </section>
 
-  <div class="hero__image"></div>
-</section>
+        <!-- Bestsellers Section -->
+        <section class="bestsellers section" id="bestsellers">
+            <div class="container">
+                <h2 class="section-title">Explore Our <span class="italic">Timeless</span> Bestseller</h2>
+                
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="rings">Rings</button>
+                    <button class="tab-btn" data-category="earrings">Earrings</button>
+                    <button class="tab-btn" data-category="pendants">Pendants</button>
+                    <button class="tab-btn" data-category="bracelets">Bracelets</button>
+                    <button class="tab-btn" data-category="bangles">Bangles</button>
+                </div>
 
-<!-- ================= USP ================= -->
-<section class="usp">
-  <div class="usp__item">Anti-Fade Polish</div>
-  <div class="usp__item">Timeless Design</div>
-  <div class="usp__item">Lightweight Comfort</div>
-  <div class="usp__item">Modern Minimal</div>
-</section>
+                <!-- Products Carousel -->
+                <div class="products-carousel">
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="products-wrapper" id="productsWrapper">
+                        <div class="products-track" id="productsTrack">
+                            <!-- Product 1 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../images/ring-1.jpg" alt="Twisted Petal Gold Bracelet">
+                                    <div class="product-actions">
+                                        <button class="quick-view" aria-label="Quick View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="add-wishlist" aria-label="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <span class="product-badge">Bestseller</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">TWISTED PETAL GOLD BRACELET</h3>
+                                    <p class="product-material">925 Sterling Silver</p>
+                                    <p class="product-price">₹2199</p>
+                                </div>
+                            </div>
 
-<!-- ================= PRODUCTS ================= -->
-<section class="products">
-  <h3>Explore Our Timeless Bestseller</h3>
+                            <!-- Product 2 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../images/infinity-pendant.jpg" alt="Twisted Petal Gold Bracelet">
+                                    <div class="product-actions">
+                                        <button class="quick-view" aria-label="Quick View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="add-wishlist" aria-label="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">TWISTED PETAL GOLD BRACELET</h3>
+                                    <p class="product-material">925 Sterling Silver</p>
+                                    <p class="product-price">₹1999 <span class="original-price">₹2999</span></p>
+                                </div>
+                            </div>
 
-  <div class="products__grid">
-    <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613?auto=format&fit=crop&w=600&q=80" alt="Gold Bracelet">
-      <h4>Twisted Petal Gold Bracelet</h4>
-      <p class="price">₹79,904 <span>₹99,904</span></p>
-    </article>
+                            <!-- Product 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../images/necklace-closeup.jpg" alt="Twisted Petal Gold Bracelet">
+                                    <div class="product-actions">
+                                        <button class="quick-view" aria-label="Quick View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="add-wishlist" aria-label="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <span class="product-badge new">New</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">TWISTED PETAL GOLD BRACELET</h3>
+                                    <p class="product-material">925 Sterling Silver</p>
+                                    <p class="product-price">₹2499</p>
+                                </div>
+                            </div>
 
-    <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80" alt="Gold Bracelet">
-      <h4>Twisted Petal Gold Bracelet</h4>
-      <p class="price">₹79,904 <span>₹99,904</span></p>
-    </article>
+                            <!-- Product 4 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../images/bracelet-1.jpg" alt="Diamond Bracelet">
+                                    <div class="product-actions">
+                                        <button class="quick-view" aria-label="Quick View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="add-wishlist" aria-label="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">DIAMOND CHAIN BRACELET</h3>
+                                    <p class="product-material">925 Sterling Silver</p>
+                                    <p class="product-price">₹2899</p>
+                                </div>
+                            </div>
 
-    <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Gold Bracelet">
-      <h4>Twisted Petal Gold Bracelet</h4>
-      <p class="price">₹79,904 <span>₹99,904</span></p>
-    </article>
-  </div>
+                            <!-- Product 5 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../images/pendants-model.jpg" alt="Heart Pendant Set">
+                                    <div class="product-actions">
+                                        <button class="quick-view" aria-label="Quick View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="add-wishlist" aria-label="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">HEART PENDANT SET</h3>
+                                    <p class="product-material">925 Sterling Silver</p>
+                                    <p class="product-price">₹3199</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <button class="btn-secondary">Shop Bestsellers</button>
-</section>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
 
-<!-- ================= ETHOS ================= -->
-<section class="ethos">
-  <div class="ethos__image"></div>
+                <a href="#" class="btn btn-secondary shop-all-btn">Shop Bestsellers <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
 
-  <div class="ethos__content">
-    <h3>Every Shape.<br>Every Sparkle.</h3>
-    <p>
-      Every piece we create is a blend of artistry and awareness,
-      handcrafted with precision and guided by purpose.
-    </p>
-    <button class="btn-primary">Know More</button>
-  </div>
-</section>
+        <!-- Recently Viewed Section -->
+        <section class="recently-viewed section">
+            <div class="container">
+                <h2 class="section-title">Recently Viewed</h2>
+                <div class="recently-grid">
+                    <div class="recent-card">
+                        <img src="../images/bracelet-model.jpg" alt="Infinity Bracelet">
+                        <div class="recent-info">
+                            <h4>TWISTED PETAL GOLD BRACELET</h4>
+                            <p>₹2199</p>
+                        </div>
+                    </div>
+                    <div class="recent-card">
+                        <img src="../images/infinity-pendant.jpg" alt="Infinity Pendant">
+                        <div class="recent-info">
+                            <h4>TWISTED PETAL GOLD BRACELET</h4>
+                            <p>₹1899</p>
+                        </div>
+                    </div>
+                    <div class="recent-card">
+                        <img src="../images/necklace-closeup.jpg" alt="Diamond Necklace">
+                        <div class="recent-info">
+                            <h4>SWAROVSKI PETAL SILVER</h4>
+                            <p>₹2499</p>
+                        </div>
+                    </div>
+                    <div class="recent-card">
+                        <img src="../images/ring-1.jpg" alt="Solitaire Ring">
+                        <div class="recent-info">
+                            <h4>TWISTED PETAL GOLD RING</h4>
+                            <p>₹2999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  © 2025 / Kilangi
-</footer>
+        <!-- Gift Notes Section -->
+        <section class="gift-notes section">
+            <div class="container">
+                <h2 class="section-title">Make It <span class="italic">Extra Special</span> with Personalised Gift Notes</h2>
+                <div class="gift-grid">
+                    <a href="#" class="gift-card">
+                        <span>Shop Under ₹1000</span>
+                    </a>
+                    <a href="#" class="gift-card">
+                        <span>Shop Under ₹2000</span>
+                    </a>
+                    <a href="#" class="gift-card">
+                        <span>Shop Under ₹5000</span>
+                    </a>
+                    <a href="#" class="gift-card">
+                        <span>E Gift Cards</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<script src="main.js"></script>
+        <!-- Featured Collection Banner -->
+        <section class="featured-banners section">
+            <div class="container">
+                <div class="banner-grid">
+                    <div class="banner-card winter">
+                        <img src="../images/winter-collection.jpg" alt="Winter Collection">
+                        <div class="banner-content">
+                            <h3>Winter <span class="italic">Love</span> Has Arrived...</h3>
+                            <a href="#" class="btn btn-light">Explore New Arrivals <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="banner-card lab-grown">
+                        <img src="../images/lab-grown.jpg" alt="Lab Grown Collection">
+                        <div class="banner-content">
+                            <h3>Introducing <span class="italic">Lab Grown</span> Silver and Gold</h3>
+                            <a href="#" class="btn btn-dark">Shop Gold and Silver <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Collection -->
+        <section class="explore-collection section">
+            <div class="container">
+                <h2 class="section-title">Explore Our Collection</h2>
+                <div class="collection-grid">
+                    <a href="#" class="collection-item">
+                        <img src="../images/ring-1.jpg" alt="Rings Collection">
+                        <span>Rings</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/earrings-model.jpg" alt="Earrings Collection">
+                        <span>Earrings</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/pendants-model.jpg" alt="Pendants Collection">
+                        <span>Pendants</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/bracelet-model.jpg" alt="Bracelets Collection">
+                        <span>Bracelets</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/necklace-closeup.jpg" alt="Necklaces Collection">
+                        <span>Necklaces</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/bracelet-1.jpg" alt="Bangles Collection">
+                        <span>Bangles</span>
+                    </a>
+                    <a href="#" class="collection-item">
+                        <img src="../images/maangtika.jpg" alt="Accessories Collection">
+                        <span>Accessories</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gifts Section -->
+        <section class="gifts-section section">
+            <div class="container">
+                <h2 class="section-title">Gifts That <span class="italic">Celebrate</span> Every Moment</h2>
+                <p class="section-subtitle">Find your perfect gift from our collection of memorable, elegant, handpicked Jewellery.</p>
+                
+                <div class="gifts-grid">
+                    <div class="gift-occasion">
+                        <img src="../images/bracelet-model.jpg" alt="Birthday Gifts">
+                        <h4>BIRTHDAY</h4>
+                        <p>Celebrate their special day with a timeless piece that speaks to their style and heart.</p>
+                        <a href="#" class="link-btn">Shop Birthday Gifts <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="gift-occasion">
+                        <img src="../images/necklace-model.jpg" alt="Anniversary Gifts">
+                        <h4>ANNIVERSARY</h4>
+                        <p>Mark your love story with exquisite fine jewellery celebrating years of togetherness.</p>
+                        <a href="#" class="link-btn">Shop Anniversary Gifts <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="gift-occasion">
+                        <img src="../images/engagement-model.jpg" alt="Engagement Gifts">
+                        <h4>ENGAGEMENT</h4>
+                        <p>Begin forever with a piece that truly captures the promise of your love.</p>
+                        <a href="#" class="link-btn">Shop Engagement Gifts <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-secondary">Explore More Collections <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="our-story section">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-image">
+                        <img src="../images/rings-model.jpg" alt="Our Story">
+                    </div>
+                    <div class="story-text">
+                        <span class="label">OUR STORY</span>
+                        <h2>Every <span class="italic">Shape.</span><br>Every <span class="italic">Sparkle.</span></h2>
+                        <p>Every piece we create is a blend of artistry and emotion, handcrafted with precision, guided by love.</p>
+                        <p>From ethically sourced materials to sustainable practices, we believe that beauty shines brightest when it's made responsibly.</p>
+                        <a href="#" class="btn btn-primary">Know More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Not Just A Trend Section -->
+        <section class="trend-section section">
+            <div class="container">
+                <h2 class="section-title">Not Just A Trend. It's<br>The <span class="italic">Future.</span></h2>
+                <p class="section-subtitle">We don't just create jewellery—our every item is crafted with the same brilliance and purity as nature's untouched without the environmental cost.</p>
+                
+                <div class="trend-features">
+                    <div class="trend-item">
+                        <i class="fas fa-gem"></i>
+                        <span>925 Sterling Silver</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Gem Stone Certified</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Easy Exchange</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-truck"></i>
+                        <span>0 Shipping Fee</span>
+                    </div>
+                </div>
+
+                <div class="trend-bottom-features">
+                    <div class="trend-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Ethical Sourcing</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-recycle"></i>
+                        <span>Pure & After Conscious & Packaging</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Customisable Designs</span>
+                    </div>
+                    <div class="trend-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Eid Fabrication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section">
+            <div class="container">
+                <h2 class="section-title">Voices of Our <span class="italic">Happy</span> Customer</h2>
+                <p class="section-subtitle">Each piece we create carries a story of craftsmanship that goes from the hands of those who wear them.</p>
+                
+                <div class="testimonials-slider">
+                    <button class="testimonial-nav prev" id="testimonialPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-title">"So pretty!"</p>
+                            <p class="testimonial-text">I purchased this Golden Radiance ring as my birthday gift, and I couldn't be happier! The craftsmanship is stunning, and the fit is perfect.</p>
+                            <a href="#" class="review-link"><i class="fas fa-arrow-right"></i> See What Mattie...</a>
+                            <p class="reviewer">— Rachael Mattie</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-title">"So pretty!"</p>
+                            <p class="testimonial-text">I purchased the Golden Radiance bracelet. I was really satisfied with the product. The craftsmanship is stunning, and the fit is perfect.</p>
+                            <a href="#" class="review-link"><i class="fas fa-arrow-right"></i> Read More Review...</a>
+                            <p class="reviewer">— Rachael Mattie</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-title">"So pretty!"</p>
+                            <p class="testimonial-text">I purchased this Golden Radiance ring as my birthday gift, and I couldn't be happier! The craftsmanship is stunning, and the fit is perfect.</p>
+                            <a href="#" class="review-link"><i class="fas fa-arrow-right"></i> Rachael Mattie...</a>
+                            <p class="reviewer">— Rachael Mattie</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-title">"So pretty!"</p>
+                            <p class="testimonial-text">The necklace exceeded my expectations. Beautiful design and the gold finish is elegant. I wear it every day!</p>
+                            <a href="#" class="review-link"><i class="fas fa-arrow-right"></i> Rachael Mattie...</a>
+                            <p class="reviewer">— Rachael Mattie</p>
+                        </div>
+                    </div>
+                    
+                    <button class="testimonial-nav next" id="testimonialNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="testimonial-dots" id="testimonialDots"></div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="instagram-section section">
+            <div class="container">
+                <div class="instagram-header">
+                    <img src="../images/logo.jpg" alt="KILANGI" class="instagram-logo">
+                    <div class="instagram-info">
+                        <p><strong>@kilangi</strong> items</p>
+                        <p>Follow us on Instagram</p>
+                    </div>
+                    <p class="instagram-cta">Tag <strong>@Kilangi</strong> and you could be featured!</p>
+                </div>
+                <a href="#" class="btn btn-primary instagram-btn">Shop Our Gallery <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo and Description -->
+                <div class="footer-brand">
+                    <img src="../images/logo.jpg" alt="KILANGI" class="footer-logo">
+                    <p>Kilangi Jewellery is a prominent brand specializing in exquisite silver and gold craftsmanship, offering a stunning collection of jewellery pieces that cater to modern aesthetics.</p>
+                    <p>Known for its intricate designs and exceptional craftsmanship, Kilangi is a top choice for those seeking elegance and quality.</p>
+                </div>
+
+                <!-- Our Collection -->
+                <div class="footer-links">
+                    <h4>OUR COLLECTION</h4>
+                    <ul>
+                        <li><a href="#">Ring</a></li>
+                        <li><a href="#">Pendant</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Earrings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-links">
+                    <h4>POLICIES</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024. KILANGI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-</html>
+</html
