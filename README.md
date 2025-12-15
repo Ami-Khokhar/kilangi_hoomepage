@@ -1,3 +1,7 @@
+Deployed Link
+https://kilangihomepage.vercel.app/
+
+
 Overview
 
 This project is a high-fidelity implementation of the Kilangi Jewellery homepage, built as part of an internship assignment. The goal was to translate the provided desktop and mobile design documents into a responsive, production-quality web page while maintaining strong attention to visual accuracy, layout consistency, and code quality.
